@@ -126,17 +126,17 @@
     <!-- breadcrumbs Ends -->
 
     <!-- reservation main starts -->
-    <section class="content reservation-main">
+    <div class="banner-form form-style-1 form-style-4">
         <div class="container">
             <div class="reservation-links text-center">
                 <h2 class="mar-bottom-60 text-capitalize">Make Your Reservation</h2>
                 <div class="reservation-links-content">
                     <div class="res-item">
-                        <a href="availability.html" class="active">1</a>
+                        <a href="availability.html" class="active"><i class="fa fa-check"></i></a>
                         <p>Check Availability</p>
                     </div>
                     <div class="res-item">
-                        <a href="room-select.html">2</a>
+                        <a href="room-select.html" >2</a>
                         <p>Select Room</p>
                     </div>
                     <div class="res-item">
@@ -149,72 +149,82 @@
                     </div>
                 </div>
             </div>
-            <div class="banner-form form-style-1">
-                <div class="form-content">
-                    <div class="table-item">
-                        <label>Check In</label>
-                        <div class="form-group">
-                            <select class="niceSelect">
-                                <option value="1">05/Jan</option>
-                                <option value="2">06/Jan</option>
-                                <option value="3">07/Jan</option>
-                                <option value="4">08/Jan</option>
-                                <option value="5">09/Jan</option>
-                            </select>
+            <div class="section-title">
+                <h4 class="yellow">Search Your Best</h4>
+                <h2 class="white"><span>Find Best Hotel</span> For Spending Your Vacation</h2>
+            </div>
+            <div class="form-content text-center">
+                <div class="table-item">
+                    <label>Check In</label>
+                    <div class="form-group">
+                        <div class="date-range-inner-wrapper">
+                            <input id="date-range2" class="form-control" value="Check In">
+                            <span class="input-group-addon">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </span>
                         </div>
                     </div>
-                    <div class="table-item">
-                        <label>Check Out</label>
-                        <div class="form-group">
-                            <select class="niceSelect">
-                                <option value="1">05/Jan</option>
-                                <option value="2">06/Jan</option>
-                                <option value="3">07/Jan</option>
-                                <option value="4">08/Jan</option>
-                                <option value="5">09/Jan</option>
-                            </select>
+                </div>
+                <div class="table-item">
+                    <label>Check Out</label>
+                    <div class="form-group">
+                        <div class="date-range-inner-wrapper">
+                            <input id="date-range3" class="form-control" value="Check In">
+                            <span class="input-group-addon">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                            </span>
                         </div>
                     </div>
-                    <div class="table-item">
-                        <label>Guests</label>
-                        <div class="form-group">
-                            <select class="niceSelect">
-                                <option value="1">01</option>
-                                <option value="2">02</option>
-                                <option value="3">03</option>
-                                <option value="4">04</option>
-                                <option value="5">05</option>
-                            </select>
-                        </div>
+                </div>
+                <div class="table-item">
+                    <label>Room Type</label>
+                    <div class="form-group form-icon">
+                        <select id="room-type">
+                            <option value="">Select Room Type</option>
+                            <option value="1">Standard Room</option>
+                            <option value="2">Deluxe Room</option>
+                            <option value="3">Suite</option>
+                            <option value="4">Presidential Suite</option>
+                            <option value="5">Family Room</option>
+                        </select>
                     </div>
-                    <div class="table-item">
-                        <label>Nights</label>
-                        <div class="form-group">
-                            <select class="niceSelect">
-                                <option value="1">05</option>
-                                <option value="2">06</option>
-                                <option value="3">07</option>
-                                <option value="4">08</option>
-                                <option value="5">09</option>
-                            </select>
-                        </div>
+                </div>
+                <div class="table-item">
+                    <label>Adults</label>
+                    <div class="form-group form-icon">
+                        <select id="adults">
+                            <option value="">Select Adults</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">other</option>
+                        </select>
                     </div>
-                    <div class="table-item">
-                        <div class="form-btn mar-top-35">
-                            <a class="btn btn-orange">Check Availability</a>
-                        </div>
+                </div>
+                <div class="table-item">
+                    <label>Childrens</label>
+                    <div class="form-group form-icon">
+                        <select id="children">
+                            <option value="">Select Children</option>
+                            <option value="0">00</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">other</option>
+                        </select>
                     </div>
                 </div>
             </div>
-
-            <div class="calendar-range mar-top-80">
-                <div class="date-range-inner-wrapper">
-                    <input id="date-range12" class="form-control hidden">
-                    <div id="date-range12-container"></div>
-                </div>
-            </div>    
+            <div class="form-btn text-center mar-top-20">
+                <a class="btn btn-orange" onclick="checkAvailability()">Check Availability</a>
+            </div>
         </div>
-    </section>
+    </div>
+
     <!-- reservation main Ends -->
 
     <!-- Footer Starts -->
@@ -378,6 +388,9 @@
     <script src="js/main.js"></script>
     <script src="js/custom-nav.js"></script>
     <script src="js/custom-date.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/custom-swiper2.js"></script>
+    <script src="js/custom-singledate.js"></script>
 
 </body>
 </html>
