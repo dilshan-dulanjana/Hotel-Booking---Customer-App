@@ -8,7 +8,7 @@
 
     <title>Home</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Hotel-favicon.png">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--Default CSS-->
@@ -177,32 +177,50 @@
                     </div>
                 </div>
                 <div class="table-item">
-                    <label>Guests</label>
+                    <label>Room Type</label>
                     <div class="form-group form-icon">
-                        <select>
+                        <select id="room-type">
+                            <option value="">Select Room Type</option>
+                            <option value="1">Standard Room</option>
+                            <option value="2">Deluxe Room</option>
+                            <option value="3">Suite</option>
+                            <option value="4">Presidential Suite</option>
+                            <option value="5">Family Room</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="table-item">
+                    <label>Adults</label>
+                    <div class="form-group form-icon">
+                        <select id="adults">
+                            <option value="">Select Adults</option>
                             <option value="1">01</option>
                             <option value="2">02</option>
                             <option value="3">03</option>
                             <option value="4">04</option>
                             <option value="5">05</option>
+                            <option value="6">other</option>
                         </select>
                     </div>
                 </div>
                 <div class="table-item">
-                    <label>Nights</label>
+                    <label>Childrens</label>
                     <div class="form-group form-icon">
-                        <select>
-                            <option value="1">05</option>
-                            <option value="2">06</option>
-                            <option value="3">07</option>
-                            <option value="4">08</option>
-                            <option value="5">09</option>
+                        <select id="children">
+                            <option value="">Select Children</option>
+                            <option value="0">00</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">other</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="form-btn text-center mar-top-20">
-                <a class="btn btn-orange">Check Availability</a>
+                <a class="btn btn-orange" onclick="checkAvailability()">Check Availability</a>
             </div>
         </div>
     </div>
@@ -542,76 +560,6 @@
     </section>
     <!-- Call To Action Ends -->
 
-    <!-- events starts -->
-    <section class="events">
-        <div class="container">
-            <div class="section-title">
-                <h2>Upcoming Events of <span>Gautama</span></h2>
-                <p class="mar-bottom-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-            </div>
-            <div class="events-main1">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news12.jpg" alt="image">
-                                <p class="dates white"><span class="white">16</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-                                
-                                <h4><a href="">Wedding <span>Ceremony</span></a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news13.jpg" alt="image">
-                                <p class="dates white"><span class="white">21</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-                                
-                                <h4><a href=""><span>New Year</span> Party</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news14.jpg" alt="image">
-                                <p class="dates white"><span class="white">25</span> DEC 2019</p>
-                            </div>
-                            <div class="news-content">
-                                
-                                <h4><a href="">Hotel <span>Autumn</span> 2020</a></h4>
-                                <div class="meta mar-bottom-15">
-                                    <span class="time mar-right-10"> <i class="fas fa-clock"></i> 8:00 pm - 4:00 am</span>
-                                    <span class="location"> <i class="fas fa-map-marker"></i>PARIS, FRENCH</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Events Ends -->
-
    <!-- Reviews Starts -->
     <section class="reviews reviews-style-1">
         <div class="container">
@@ -663,78 +611,6 @@
         <div class="overlay"></div>
     </section>
     <!-- Reviews Ends -->
-
-    <!-- News Starts -->
-    <section class="news">
-        <div class="container">
-            <div class="section-title">
-                <h2>Latest <span>News</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ex neque, sodales accumsan sapien et, auctor vulputate quam donec vitae consectetur turpis</p>
-            </div>
-            <div class="news-outer">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news1.jpg" alt="image">
-                            </div>
-                            <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Gautama Hotel to travel this summer</a></h4>
-                                <div class="room-services mar-bottom-10">
-                                    <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news2.jpg" alt="image">
-                            </div>
-                            <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Gautama Hotel to travel this summer</a></h4>
-                                <div class="room-services mar-bottom-10">
-                                    <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="news-item">
-                            <div class="news-image">
-                                <img src="images/news3.jpg" alt="image">
-                            </div>
-                            <div class="news-content">
-                                <p class="date mar-bottom-5">16 DECEMBER 2019</p>
-                                <h4><a href="single-right.html">Why choose Gautama Hotel to travel this summer</a></h4>
-                                <div class="room-services mar-bottom-10">
-                                    <ul>
-                                        <li><a href="single-right.html"><i class="fa fa-user" aria-hidden="true"></i> By Jack Daniels</a></li>
-                                        <li><a href="single-right.html"><i class="fa fa-comment" aria-hidden="true"></i> 3 comments</a></li>
-                                    </ul>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum orci nulla, fermentum in faucibus a, interdum eu nibh.</p>
-                                <a href="single-left.html">READ MORE <i class="fas fa-angle-double-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- News Ends -->
 
     <!-- Gallery starts -->
     <section class="content gallery gallery1">
@@ -947,5 +823,6 @@
     <script src="js/custom-swiper2.js"></script>
     <script src="js/custom-singledate.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
