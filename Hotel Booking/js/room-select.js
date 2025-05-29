@@ -44,23 +44,39 @@ function getCurrentUrlData() {
     };
 }
 
-// Function to update booking (you can customize this)
-function updateBooking() {
-    const values = getCurrentUrlData();
+// Function to send data to backend
+async function sendData() {
+    try {
+        const urlData = getCurrentUrlData();
 
-    // You can process the booking update here
-    console.log('Current Booking Details:', values);
-    alert('Redirecting to modify booking details...');
+        const response = await fetch('/your-backend-endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(urlData)
+        });
 
-    // Redirect back to booking form or another page
-    // const params = new URLSearchParams(values);
-    // window.location.href = `booking-form.html?${params.toString()}`;
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const result = await response.json();
+        console.log('Backend response:', result);
+
+        // Handle the response data here
+        handleBackendResponse(result);
+
+    } catch (error) {
+        console.error('Error sending data to backend:', error);
+    }
 }
 
 // Initialize the display when page loads
 document.addEventListener('DOMContentLoaded', function() {
     // Display URL data in spans
     displayUrlDataInSpans();
+    sendData();
 
     console.log('Booking details displayed from URL parameters');
 });
