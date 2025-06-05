@@ -5,6 +5,7 @@ function checkAvailability() {
     const checkIn = document.getElementById('date-range2').value;
     const checkOut = document.getElementById('date-range3').value;
     const roomType = document.getElementById('room-type').value;
+    const promocode = document.getElementById('promocode').value;
     const adults = document.getElementById('adults').value;
     const children = document.getElementById('children').value;
 
@@ -21,7 +22,8 @@ function checkAvailability() {
         checkOut: checkOut,
         roomType: roomType,
         adults: adults,
-        children: children
+        children: children,
+        promocode: promocode
     });
 
     // Navigate to room select page with parameters
